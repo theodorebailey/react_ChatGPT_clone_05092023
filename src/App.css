@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
+/* around 50mins lost interest in method of teaching */
+
 *{
   margin: 0;
   padding: 0;
@@ -9,7 +11,7 @@
 /* 10px is 62.5% of 16px = 1 rem */
 /* important for REMS */
 html{
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
 }
 
 body{
@@ -24,7 +26,7 @@ body{
 }
 
 .sidebar{
-  flex: 3;
+  flex: 2;
   border-right: 1px solid rgb(100, 100, 100);
 }
 
@@ -43,12 +45,18 @@ body{
 .upperside{
   padding: 2.5rem;
   border-bottom: 1px solid rgb(100, 100, 100);
+  height: 70%;
+}
+
+.upperside-top{
+  display: flex;
+  align-items: center;
   margin-bottom: 2.5rem;
 }
 
 .add-btn{
   height: 2rem;
-  padding-right: 1rem;
+  padding-right: 3rem;
 }
 
 .mid-btn {
@@ -60,7 +68,6 @@ body{
   width: 25rem;
   display: flex;
   align-items: center;
-  justify-content: center;
   margin: 0 auto;
   margin-bottom: 3rem;
   border-radius: 0.5rem;
@@ -68,12 +75,114 @@ body{
 
 .query{
   display: flex;
+  font-size: 1.4rem;
   align-items: center;
-  /* not needed doe some reason */
-  /* justify-content: center; */
   background: transparent;
+  color: rgba(222, 222, 222, 1);
   padding: 1.5rem;
   width: 25rem;
-  margin: 1rem auto;
+  margin: 1.5rem auto;
+  border-radius: 0.5rem;
   border: 1px solid rgba(98, 98, 98, 1)
+}
+
+.query>img{
+  margin-right: 2rem;
+  object-fit: cover;
+  height: 1.75rem;
+}
+
+.lower-side{
+  padding: 2rem;
+}
+
+.list-items{
+  margin-top: 3rem;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.list-items:nth-child(1){
+  margin-top: 4.5rem;
+}
+
+.list-items-img{
+  margin: 1rem;
+  padding-right: 1rem;
+  width: 3rem;
+  height: auto;
+}
+
+.list-items:nth-child(1)>.list-items-img{
+  margin-right: 0.5rem;
+}
+
+.list-items:nth-child(3)>.list-items-img{
+  margin-right: 0.75rem;
+}
+
+.main{
+  min-height: calc(100vh - 14rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6rem 10rem;
+  margin-bottom: 0;
+}
+
+.chats{
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 70rem;
+  height: calc(100vh - 17rem);
+}
+
+.chat{
+  margin: 1rem;
+  padding: 2rem 3rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.chat-footer{
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inp{
+  padding: 0.5rem;
+  background: rgba(28, 30, 28, 1);
+  align-items: center;
+  border-radius: 0.5rem;
+  justify-content: center;
+}
+
+.inp>input {
+  width: calc(100% - 3rem);
+  outline: none;
+  padding: 1.25rem;
+  color: white;
+}
+
+.inp>input, .send{
+  background: transparent;
+  border: none;
+}
+
+.chat-footer>P{
+  margin: 2rem 0;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* This will hide the scrollbar in WebKit (e.g., Chrome, Safari) */
 }
